@@ -8,6 +8,7 @@ namespace User_Registration_Program
         {
              Console.WriteLine("Welcome to Reg Expressions!");
              Console.WriteLine("press 1 for first name");
+            Console.WriteLine("press 2 for last name");
             var getValueByUser = Convert.ToInt32(Console.ReadLine());
             switch (getValueByUser)
             {
@@ -19,6 +20,15 @@ namespace User_Registration_Program
                         Console.WriteLine("First Name is VALID !!");
                     else
                         Console.WriteLine("First Name is INVALID !!");
+                    break;
+                case 2:
+                    Console.WriteLine("Enter Last Name :");
+                    string lastName = Console.ReadLine();
+                    Last_Name_Rgex regexlastname = new Last_Name_Rgex();
+                    if (regexlastname.ValidLastName(lastName))
+                        Console.WriteLine("Last Name is VALID !!");
+                    else
+                        Console.WriteLine("Last Name is INVALID !!");
                     break;
             }
            
