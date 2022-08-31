@@ -6,12 +6,13 @@ namespace User_Registration_Program
     {
         static void Main(string[] args)
         {
-             Console.WriteLine("Welcome to Reg Expressions!");
-             Console.WriteLine("press 1 for first name");
+            Console.WriteLine("Welcome to Reg Expressions!");
+            Console.WriteLine("press 1 for first name");
             Console.WriteLine("press 2 for last name");
             Console.WriteLine("press 3 for email");
             Console.WriteLine("press 4 for mobil number");
-            Console.WriteLine("press 4 for checking rule");
+            Console.WriteLine("press 5 for password1");
+            Console.WriteLine("press 6 for password2");
             var getValueByUser = Convert.ToInt32(Console.ReadLine());
             switch (getValueByUser)
             {
@@ -62,7 +63,16 @@ namespace User_Registration_Program
                     else
                         Console.WriteLine("Password is INVALID !!");
                     break;
-                    default:
+                case 6:
+                    Console.WriteLine("Enter Password :");
+                    string Rule2 = Console.ReadLine();
+                    Password2 password2 = new Password2();
+                    if (password2.ValidCondition2(Rule2))
+                        Console.WriteLine("Password is VALID !!");
+                    else
+                        Console.WriteLine("Password is INVALID !!");
+                    break;
+                default:
                     Console.WriteLine("invalid number");
                     return;
             }
