@@ -15,6 +15,7 @@ namespace User_Registration_Program
             Console.WriteLine("press 6 for password2");
             Console.WriteLine("press 7 for password3");
             Console.WriteLine("press 8 for password4");
+            Console.WriteLine("press 9 for simple email");
             var getValueByUser = Convert.ToInt32(Console.ReadLine());
             switch (getValueByUser)
             {
@@ -91,6 +92,15 @@ namespace User_Registration_Program
                         Console.WriteLine("Password is VALID !!");
                     else
                         Console.WriteLine("Password is INVALID !!");
+                    break;
+                case 9:
+                    Console.WriteLine("Enter Sample Emails to Test :");
+                    string sampleemail = Console.ReadLine();
+                    Simple_Email simpleemail = new Simple_Email();
+                    if (simpleemail.SampleEmail(sampleemail))
+                        Console.WriteLine("Sample Email is VALID !!");
+                    else
+                        Console.WriteLine("Sample Email is INVALID !!");
                     break;
                 default:
                     Console.WriteLine("invalid number");
