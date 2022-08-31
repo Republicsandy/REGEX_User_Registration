@@ -14,6 +14,7 @@ namespace User_Registration_Program
             Console.WriteLine("press 5 for password1");
             Console.WriteLine("press 6 for password2");
             Console.WriteLine("press 7 for password3");
+            Console.WriteLine("press 8 for password4");
             var getValueByUser = Convert.ToInt32(Console.ReadLine());
             switch (getValueByUser)
             {
@@ -78,6 +79,15 @@ namespace User_Registration_Program
                     string Rule3 = Console.ReadLine();
                     Password3 password3 = new Password3();
                     if (password3.ValidCondition3(Rule3))
+                        Console.WriteLine("Password is VALID !!");
+                    else
+                        Console.WriteLine("Password is INVALID !!");
+                    break;
+                case 8:
+                    Console.WriteLine("Enter Password :");
+                    string Rule4 = Console.ReadLine();
+                    Password4 password4 = new Password4();
+                    if (password4.ValidCondition4(Rule4))
                         Console.WriteLine("Password is VALID !!");
                     else
                         Console.WriteLine("Password is INVALID !!");
