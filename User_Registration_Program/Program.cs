@@ -9,6 +9,8 @@ namespace User_Registration_Program
              Console.WriteLine("Welcome to Reg Expressions!");
              Console.WriteLine("press 1 for first name");
             Console.WriteLine("press 2 for last name");
+            Console.WriteLine("press 3 for email");
+            Console.WriteLine("press 4 for mobil number");
             var getValueByUser = Convert.ToInt32(Console.ReadLine());
             switch (getValueByUser)
             {
@@ -40,6 +42,15 @@ namespace User_Registration_Program
                     else
                         Console.WriteLine("Email is INVALID !!");
                     break ;
+                case 4:
+                    Console.WriteLine("Enter Mobile Number :");
+                    string mobilenum = Console.ReadLine();
+                    Regex_Mobil_Number regexnumber = new Regex_Mobil_Number();
+                    if (regexnumber.ValidMobile(mobilenum))
+                        Console.WriteLine("Mobile Number is VALID !!");
+                    else
+                        Console.WriteLine("Mobile Number is INVALID !!");
+                    break;
             }
            
         }
