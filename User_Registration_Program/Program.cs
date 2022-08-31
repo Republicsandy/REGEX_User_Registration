@@ -13,6 +13,7 @@ namespace User_Registration_Program
             Console.WriteLine("press 4 for mobil number");
             Console.WriteLine("press 5 for password1");
             Console.WriteLine("press 6 for password2");
+            Console.WriteLine("press 7 for password3");
             var getValueByUser = Convert.ToInt32(Console.ReadLine());
             switch (getValueByUser)
             {
@@ -72,11 +73,19 @@ namespace User_Registration_Program
                     else
                         Console.WriteLine("Password is INVALID !!");
                     break;
+                case 7:
+                    Console.WriteLine("Enter Password :");
+                    string Rule3 = Console.ReadLine();
+                    Password3 password3 = new Password3();
+                    if (password3.ValidCondition3(Rule3))
+                        Console.WriteLine("Password is VALID !!");
+                    else
+                        Console.WriteLine("Password is INVALID !!");
+                    break;
                 default:
                     Console.WriteLine("invalid number");
                     return;
             }
-           
         }
     }
 }
