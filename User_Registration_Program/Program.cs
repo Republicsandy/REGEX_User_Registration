@@ -30,6 +30,16 @@ namespace User_Registration_Program
                     else
                         Console.WriteLine("Last Name is INVALID !!");
                     break;
+
+                case 3:
+                    Console.WriteLine("Enter Email :");
+                    string email = Console.ReadLine();
+                    Regex_Email regexemail = new Regex_Email();
+                    if (regexemail.ValidEmail(email))
+                        Console.WriteLine("Email is VALID !!");
+                    else
+                        Console.WriteLine("Email is INVALID !!");
+                    break ;
             }
            
         }
